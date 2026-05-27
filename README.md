@@ -183,4 +183,3 @@ Este projeto foi criado para praticar:
 - organização de projetos
 - programação em Python
 - orientação a objetos
-```
