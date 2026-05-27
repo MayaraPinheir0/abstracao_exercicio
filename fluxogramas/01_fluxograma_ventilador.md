@@ -1,3 +1,9 @@
+# Ventilador
+
+## Objetivo
+Simular funcionamento do ventilador assoprador.
+
+## Fluxograma
 ```flowchart TB
 
     A["inicio"] --> B("recebe energia")
@@ -28,4 +34,28 @@
     style K fill:#FFF9C4
     style L fill:#FFCDD2
     style P fill:#C8E6C9
+```
+
+## Pseudocódigo
+```text
+INICIO
+
+Ligar ventilador
+
+Enquanto o ventilador estiver ligado:
+    motor será acionado
+    eixo irá se mover
+    hélice irá girar, na velocidade minima
+
+    Se o usuario alterar a velocidade:
+        energia irá aumentar
+        rotacao irá aumentar
+        fluxo de ar irá aumentar
+
+    Se nao:
+        interrompe a energia
+        desliga o ventilador
+    
+FIM
+
 ```
