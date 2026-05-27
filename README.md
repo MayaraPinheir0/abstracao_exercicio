@@ -1,37 +1,72 @@
-# desafio: criar um ventilador, um ar condicionado e um aquecedor usando o conceito de abstração
+# Desafio: Abstração de Dispositivos Climáticos
 
-Para resoluçao deve seguir os passos a baixo:
+Projeto desenvolvido para praticar conceitos fundamentais de programação e modelagem computacional utilizando abstração.
 
-a. abstração
-b. modelagem (fluxograma)
-c. logica (pseudocódigo)
-d. código
-e. organizacao
+O objetivo é criar:
 
-# 1. DEFINIÇAO: ventilador-soprador
+- ventilador
+- ar-condicionado
+- aquecedor
 
-Dispositivo que recebe 'energia eletrica' e converte em 'energia mecanica' de rotacao. 
+seguindo etapas de análise, modelagem lógica e implementação.
 
-O eixo é o meio de transformacao, e controle do fluxo de recebimento de energia, que resulta no  controle da velocidade das hélices para mover o ar.
+---
 
-Há uma relacao diretamente proporcional, no aumento de energia e no aumento da pressao do ar.
+# Etapas do Projeto
 
-O que será traduzido em velocidades do ventilador, quanto maior a velocidade, maior também o consumo em kw.
+Para resolver o desafio, o desenvolvimento seguirá as etapas abaixo:
 
---- REFORMULAÇAO
+1. Abstração
+2. Modelagem (fluxograma)
+3. Lógica (pseudocódigo)
+4. Código
+5. Organização do projeto
 
-No ventilador
+---
 
-o motor recebe energia eletrica, que converterá em energia mecanica, promovendo o movimento de rotacao do motor que acionará a hélice, entrando no estado de ligado, na velocidade minima. 
+# 1. Ventilador / Soprador
 
-Seu comportamento (velocidade) será alterado se houver alteracao (aumento ou diminuicao) na passagem de energia.
+## 1.1 Definição
 
-Tal comportamento alterará a rotacao e o fluxo de ar, resultando na quantidade de consumo.
+O ventilador é um dispositivo que recebe energia elétrica e a converte em energia mecânica de rotação.
 
-O ventilador só para quando desligar for acionado.
+O motor aciona o eixo, que transmite o movimento para as hélices, promovendo o fluxo de ar.
 
-## Modelagem geral
-```fluxogram TD
+O comportamento do ventilador depende da quantidade de energia recebida:
+
+- maior energia
+- maior rotação
+- maior fluxo de ar
+- maior consumo energético
+
+---
+
+## 1.2 Reformulação Computacional
+
+No ventilador:
+
+- o motor recebe energia elétrica;
+- a energia é convertida em movimento de rotação;
+- o eixo transmite o movimento para a hélice;
+- o sistema entra no estado `ligado`;
+- o ventilador inicia na velocidade mínima.
+
+Seu comportamento pode ser alterado através do aumento ou redução da passagem de energia.
+
+A alteração da energia modifica:
+
+- velocidade
+- rotação
+- fluxo de ar
+- consumo energético
+
+O ventilador permanece funcionando até que o comando de desligamento seja acionado.
+
+---
+
+# 1.3 Modelagem Geral
+
+```text
 INÍCIO
 ↓
 receber energia
@@ -49,58 +84,103 @@ velocidade = mínima
 consumo = mínimo
 ↓
 usuário altera velocidade?
- ├─ SIM → aumentar potência
- │        → aumentar rotação
- │        → aumentar fluxo de ar
- │        → aumentar consumo
- │
- └─ NÃO
+
+├─ SIM
+│   ↓
+│ aumentar potência
+│ aumentar rotação
+│ aumentar fluxo de ar
+│ aumentar consumo
+│
+└─ NÃO
+
 ↓
 usuário desligou?
- ├─ NÃO → continuar funcionamento
- └─ SIM → interromper energia
-          → estado = desligado
+
+├─ NÃO → continuar funcionamento
+│
+└─ SIM
+    ↓
+ interromper energia
+ estado = desligado
+
 FIM
 ```
 
+---
 
-## 1.2 ESTRUTURA
-### 1.2.1. Componentes
-* motor
-* eixo
-* hélice
-* fonte de energia
+# 1.4 Estrutura do Sistema
 
-### 1.2.2. Comportamentos
-* ligar
-* desligar
-* aumentar velocidade
-* reduzir velocidade
+## 1.4.1 Componentes
 
-### 1.2.3. Atributos
-* velocidade
-* consumo
-* potencia
-* estado ligado / desligado
+- motor
+- eixo
+- hélice
+- fonte de energia
 
-## 1.3. VARIAVEIS
-|-----------|-----------|--------|
-| VARIAVEL  |    TIPO   | FUNÇAO |
-|-----------|-----------|--------|
-| estado | booleano | ligado / desligado |
-| velocidade| inteiro | nivel atual |
-| consumo | real | gasto energetico |
-| potencia | real | força do motor |
-|--------|----------|--------------|
+---
 
+## 1.4.2 Comportamentos
 
-## 1.4. TABELA ESTADOS
-|-----------|-------------|------|
-|VELOCIDADE | FLUXO DE AR | CONSUMO KW |
-|-----------|-------------|------|
-| 0 | desligado | 0 kw |
-| 1 | baixo | 10 kw |
-| 2 | médio | 20 kw |
-| 3 | alto | 30 kw |
-|-----------|-------------|------|
+- ligar
+- desligar
+- aumentar velocidade
+- reduzir velocidade
 
+---
+
+## 1.4.3 Atributos
+
+- velocidade
+- consumo
+- potência
+- estado (ligado/desligado)
+
+---
+
+# 1.5 Variáveis do Sistema
+
+| Variável   | Tipo      | Função                    |
+|------------|-----------|----------------------------|
+| estado     | booleano  | ligado / desligado         |
+| velocidade | inteiro   | nível atual                |
+| consumo    | real      | gasto energético           |
+| potencia   | real      | força do motor             |
+
+---
+
+# 1.6 Tabela de Estados
+
+| Velocidade | Fluxo de Ar | Consumo |
+|------------|-------------|----------|
+| 0          | desligado   | 0 kw     |
+| 1          | baixo       | 10 kw    |
+| 2          | médio       | 20 kw    |
+| 3          | alto        | 30 kw    |
+
+---
+
+# Próximas Etapas
+
+- [ ] Criar fluxograma visual
+- [ ] Desenvolver pseudocódigo
+- [ ] Implementar em Python
+- [ ] Criar versão orientada a objetos
+- [ ] Adicionar ar-condicionado
+- [ ] Adicionar aquecedor
+- [ ] Melhorar organização do projeto
+
+---
+
+# Objetivo de Estudo
+
+Este projeto foi criado para praticar:
+
+- abstração
+- lógica de programação
+- modelagem computacional
+- algoritmos
+- organização de projetos
+- programação em Python
+- orientação a objetos
+```
