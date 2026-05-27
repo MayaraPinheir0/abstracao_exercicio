@@ -27,13 +27,13 @@ Simular funcionamento do ventilador assoprador.
     P --> G
 
     style F fill:#C8E6C9
-    style G fill:#FFF9C4
+    style G fill:#C8E6C9
     style H fill:#FFF9C4
     style I fill:#FFF9C4
     style J fill:#FFF9C4
     style K fill:#FFF9C4
     style L fill:#FFCDD2
-    style P fill:#C8E6C9
+    style N fill:#C8E6C9
 ```
 
 ## Pseudocódigo
