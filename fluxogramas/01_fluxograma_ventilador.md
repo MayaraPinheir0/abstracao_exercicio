@@ -1,4 +1,5 @@
-```flowchart TB
+```mermaid
+flowchart TB
 
     A["inicio"] --> B("recebe energia")
     B --> C("aciona motor")
