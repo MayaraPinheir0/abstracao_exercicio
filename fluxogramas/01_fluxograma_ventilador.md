@@ -1,9 +1,3 @@
-# Ventilador
-
-## Objetivo
-Simular funcionamento do ventilador assoprador.
-
-## Fluxograma
 ```flowchart TB
 
     A["inicio"] --> B("recebe energia")
