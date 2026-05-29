@@ -1,185 +1,140 @@
-# Desafio: Abstração de Dispositivos Climáticos
+# 🧠 abstração_exercicio
 
-Projeto desenvolvido para praticar conceitos fundamentais de programação e modelagem computacional utilizando abstração.
+## 📖 Descrição
 
-O objetivo é criar:
+Repositório de estudos voltado para **abstração computacional**, **modelagem de sistemas**, **orientação a objetos**, **engenharia de software** e práticas com **Git/GitHub**.
 
-- ventilador
-- ar-condicionado
-- aquecedor
-
-seguindo etapas de análise, modelagem lógica e implementação.
+O objetivo deste projeto é transformar objetos e sistemas do mundo real em representações computacionais utilizando Python, fluxogramas, pseudocódigo e documentação técnica.
 
 ---
 
-# Etapas do Projeto
+# 🎯 Objetivos de estudo
 
-Para resolver o desafio, o desenvolvimento seguirá as etapas abaixo:
+Este repositório foi criado para praticar:
 
-1. Abstração
-2. Modelagem (fluxograma)
-3. Lógica (pseudocódigo)
-4. Código
-5. Organização do projeto
-
----
-
-# 1. Ventilador / Soprador
-
-## 1.1 Definição
-
-O ventilador é um dispositivo que recebe energia elétrica e a converte em energia mecânica de rotação.
-
-O motor aciona o eixo, que transmite o movimento para as hélices, promovendo o fluxo de ar.
-
-O comportamento do ventilador depende da quantidade de energia recebida:
-
-- maior energia
-- maior rotação
-- maior fluxo de ar
-- maior consumo energético
+* lógica de programação
+* abstração computacional
+* modelagem de objetos
+* orientação a objetos
+* engenharia de software
+* organização de projetos
+* documentação técnica
+* versionamento com Git e GitHub
 
 ---
 
-## 1.2 Reformulação Computacional
+# 🧪 Exercícios desenvolvidos
 
-No ventilador:
-
-- o motor recebe energia elétrica;
-- a energia é convertida em movimento de rotação;
-- o eixo transmite o movimento para a hélice;
-- o sistema entra no estado `ligado`;
-- o ventilador inicia na velocidade mínima.
-
-Seu comportamento pode ser alterado através do aumento ou redução da passagem de energia.
-
-A alteração da energia modifica:
-
-- velocidade
-- rotação
-- fluxo de ar
-- consumo energético
-
-O ventilador permanece funcionando até que o comando de desligamento seja acionado.
+| Exercício                   | Conceitos                    |
+| --------------------------- | ---------------------------- |
+| Ventilador                  | classes, estados, velocidade |
+| Xícara                      | abstração, atributos, ações  |
+| Semáforo                    | lógica condicional, estados  |
+| Elevador *(futuro)*         | modelagem de sistemas        |
+| Caixa eletrônico *(futuro)* | regras de negócio            |
 
 ---
 
-# 1.3 Modelagem Geral
+# 🧩 Conceitos praticados
 
-```text
-INÍCIO
-↓
-receber energia
-↓
-acionar motor
-↓
-mover eixo
-↓
-girar hélices
-↓
-estado = ligado
-↓
-velocidade = mínima
-↓
-consumo = mínimo
-↓
-usuário altera velocidade?
+## 🔹 Abstração
 
-├─ SIM
-│   ↓
-│ aumentar potência
-│ aumentar rotação
-│ aumentar fluxo de ar
-│ aumentar consumo
+Representação simplificada de objetos e sistemas reais.
+
+## 🔹 Modelagem
+
+Estruturação de atributos, comportamentos e regras.
+
+## 🔹 Engenharia de Software
+
+Organização do projeto, documentação e manutenção.
+
+## 🔹 Git e GitHub
+
+Controle de versão, commits e evolução do projeto.
+
+---
+
+# 🛠️ Tecnologias utilizadas
+
+<p align="left">
+  <img 
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" 
+    width="45" 
+    height="45"
+    alt="Python"
+  />
+
+<img 
+ src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" 
+ width="45" 
+ height="45"
+ alt="Git"
+/>
+
+<img 
+ src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" 
+ width="45" 
+ height="45"
+ alt="GitHub"
+/>
+
+<img 
+ src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/markdown/markdown-original.svg" 
+ width="45" 
+ height="45"
+ alt="Markdown"
+/>
+
+</p>
+
+---
+
+# 📂 Estrutura do projeto
+
+```bash id="x3d56m"
+abstracao_exercicio/
 │
-└─ NÃO
-
-↓
-usuário desligou?
-
-├─ NÃO → continuar funcionamento
+├── docs/
+│   ├── conceitos /
+│   ├── definicoes /
+│   ├    ├── ventilador.tx
+│   ├    ├── xicara.tx
+│   ├    └── semaforo.tx
+│   ├
+│   └── fluxogramas/
+│        ├──ventilador.md
+│        └─ xicara.md
 │
-└─ SIM
-    ↓
- interromper energia
- estado = desligado
-
-FIM
+├── pseudocodigo/
+│   └─ ventilador.tx
+│
+├── src/
+│   ├── ventilador/
+│   ├── xicara/
+│   └── semaforo/
+│
+└── README.md
 ```
 
 ---
 
-# 1.4 Estrutura do Sistema
+# 🚀 Objetivo futuro
 
-## 1.4.1 Componentes
+Expandir o repositório para incluir:
 
-- motor
-- eixo
-- hélice
-- fonte de energia
-
----
-
-## 1.4.2 Comportamentos
-
-- ligar
-- desligar
-- aumentar velocidade
-- reduzir velocidade
+* testes automatizados
+* diagramas UML
+* padrões de projeto
+* arquitetura de software
+* simulações computacionais
+* refatoração de código
+* boas práticas de engenharia de software
 
 ---
 
-## 1.4.3 Atributos
+# 👩‍💻 Autor
 
-- velocidade
-- consumo
-- potência
-- estado (ligado/desligado)
+Mayara Pinheiro
 
----
-
-# 1.5 Variáveis do Sistema
-
-| Variável   | Tipo      | Função                    |
-|------------|-----------|----------------------------|
-| estado     | booleano  | ligado / desligado         |
-| velocidade | inteiro   | nível atual                |
-| consumo    | real      | gasto energético           |
-| potencia   | real      | força do motor             |
-
----
-
-# 1.6 Tabela de Estados
-
-| Velocidade | Fluxo de Ar | Consumo |
-|------------|-------------|----------|
-| 0          | desligado   | 0 kw     |
-| 1          | baixo       | 10 kw    |
-| 2          | médio       | 20 kw    |
-| 3          | alto        | 30 kw    |
-
----
-
-# Próximas Etapas
-
-- [ ] Criar fluxograma visual
-- [ ] Desenvolver pseudocódigo
-- [ ] Implementar em Python
-- [ ] Criar versão orientada a objetos
-- [ ] Adicionar ar-condicionado
-- [ ] Adicionar aquecedor
-- [ ] Melhorar organização do projeto
-
----
-
-# Objetivo de Estudo
-
-Este projeto foi criado para praticar:
-
-- abstração
-- lógica de programação
-- modelagem computacional
-- algoritmos
-- organização de projetos
-- programação em Python
-- orientação a objetos
+Projeto desenvolvido como ambiente pessoal de aprendizado e evolução em programação e engenharia de software.
